@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background"
+    >
+
+
+    <Button
+        android:id="@+id/medicine"
+        android:layout_width="600px"
+        android:layout_height="350px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="117dp"
+        android:text="Medicines"
+        android:foreground="?attr/selectableItemBackground"
+        android:stateListAnimator="@null"
+        android:background="@drawable/ripple"
+        />
+
+    <Button
+        android:id="@+id/rep"
+        android:layout_width="600px"
+        android:layout_height="350px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="208dp"
+        android:text="Lab Reports"
+        android:foreground="?attr/selectableItemBackground"
+        android:stateListAnimator="@null"
+        android:background="@drawable/ripple"
+        />
+
+</RelativeLayout>
