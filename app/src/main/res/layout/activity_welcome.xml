@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".welcome"
     android:background="@drawable/welcome"
+    android:alpha="0.9"
+
     >
 
 
@@ -21,6 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
 
         android:foreground="?attr/selectableItemBackground"
         android:stateListAnimator="@null"
