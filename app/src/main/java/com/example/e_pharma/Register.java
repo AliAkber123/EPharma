@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Register extends AppCompatActivity {
 
 
-TextView regUsername,regPhone,regEmail,regPassword;
+TextView Username,regPhone,regEmail,regPassword;
 Button reg;
 
 FirebaseDatabase rootNode;
@@ -28,7 +28,7 @@ DatabaseReference reference;
         setContentView(R.layout.activity_register);
 
         reg         = findViewById(R.id.registerID);
-        regUsername = findViewById(R.id.editTextTextPersonName2);
+        Username = findViewById(R.id.editTextTextPersonName2);
         regPhone    = findViewById(R.id.editTextPhone);
         regEmail    = findViewById(R.id.editTextTextEmailAddress);
         regPassword = findViewById(R.id.editTextTextPassword3);
@@ -42,7 +42,7 @@ DatabaseReference reference;
                 reference = rootNode.getReference("user");
 
                 //Get all values
-                String name = regUsername.getText().toString();
+                String name = Username.getText().toString();
                 String email = regEmail.getText().toString();
                 String phone = regPhone.getText().toString();
                 String password = regPassword.getText().toString();
@@ -51,7 +51,7 @@ DatabaseReference reference;
 
                 Registerhelper rh = new Registerhelper(name , email, phone, password);
 
-                reference.child(phone).setValue(rh);
+                reference.child(name).setValue(rh);
 
                 reg();
             }
