@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.e_pharma">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,19 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EPharma">
-        <activity android:name=".welcome">
+        <activity android:name=".Cart">
 
+
+
+        </activity>
+        <activity android:name=".welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".Register" />
-        <activity android:name=".Login">
-
-        </activity>
+        <activity android:name=".Login"></activity>
         <activity android:name=".get_report" />
         <activity android:name=".Reports" />
         <activity android:name=".Medicine" />
@@ -39,6 +42,15 @@
         <activity
             android:name=".Reports"
             tools:ignore="DuplicateActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <!--        <activity-->
+<!--            android:name=".Cart"-->
+<!--            tools:ignore="DuplicateActivity" />-->
+
+
     </application>
 
 </manifest>

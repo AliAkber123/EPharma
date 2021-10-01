@@ -7,6 +7,8 @@ import android.app.MediaRouteButton;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,19 +25,25 @@ public class Login extends AppCompatActivity {
  Button Signup;
 
 TextView Username,logPassword;
-//comment
-    //aliBroti
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+
+
         setContentView(R.layout.activity_login);
 
         Log = findViewById(R.id.loginID);
         Log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Login();
             }
         });
 
@@ -98,9 +106,9 @@ TextView Username,logPassword;
          String userEnteredUsername = Username.getText().toString().trim();
          String userEnteredPassword = logPassword.getText().toString().trim();
 
-//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user");
          Query checkUser = FirebaseDatabase.getInstance().getReference("user").orderByChild("logUsername").equalTo(userEnteredUsername);
-//        Query checkUser =reference.orderByChild("logUsername").equalTo(userEnteredUsername);
+      //  Query checkUser =reference.orderByChild("logUsername").equalTo(userEnteredUsername);
 
         checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
            @Override
@@ -108,29 +116,29 @@ TextView Username,logPassword;
 
                if(dataSnapshot.exists()){
                    Toast.makeText(Login.this, dataSnapshot.getKey(), Toast.LENGTH_SHORT).show();
-//                   Username.setError(null);
-//                   Username.setEnabled(false);
-//
-//                   String passwordFromDB = dataSnapshot.child(userEnteredUsername).child("password").getValue(String.class);
-//                   if(passwordFromDB.equals(userEnteredPassword))
-//
-//                   {
-//
-//                       logPassword.setError(null);
-//                       logPassword.setEnabled(false);
-//
-//
-//
-//                   Login();
+                  Username.setError(null);
+                   Username.setEnabled(false);
+
+                   String passwordFromDB = dataSnapshot.child(userEnteredUsername).child("password").getValue(String.class);
+                   if(passwordFromDB.equals(userEnteredPassword))
+
+                   {
+
+                       logPassword.setError(null);
+                       logPassword.setEnabled(false);
 
 
-//
-//                   } else {
-//                       MediaRouteButton progressBar = null;
-//                       progressBar.setVisibility(View.GONE);
-//                       logPassword.setError("Wrong Password");
-//                       logPassword.requestFocus();
-//                   }
+
+                   Login();
+
+
+
+                   } else {
+                       MediaRouteButton progressBar = null;
+                       progressBar.setVisibility(View.GONE);
+                       logPassword.setError("Wrong Password");
+                       logPassword.requestFocus();
+                 }
                }
 
                else {

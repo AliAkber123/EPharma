@@ -36,7 +36,7 @@
         android:layout_width="187dp"
         android:layout_height="42dp"
         android:layout_marginTop="44dp"
-        android:background="@drawable/ripple"
+        android:background="@drawable/ripple1"
         android:foreground="?attr/selectableItemBackground"
         android:stateListAnimator="@null"
         android:text="Submit"
