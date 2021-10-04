@@ -21,18 +21,17 @@
         >
 
 
-
         <Button
             android:id="@+id/hos1"
             android:layout_width="match_parent"
             android:layout_height="180px"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="Apollo Hospitals Dhaka"
+            android:background="@drawable/ripple1"
+            android:fontFamily="@font/days_one"
             android:foreground="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
-            android:background="@drawable/ripple1"
-            />
+            android:text="Apollo Hospitals Dhaka" />
 
         <Space
             android:layout_width="match_parent"
@@ -45,6 +44,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/ripple1"
+            android:fontFamily="@font/days_one"
             android:foreground="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="Asgar Ali Hospital " />
@@ -62,6 +62,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/ripple1"
+            android:fontFamily="@font/days_one"
             android:foreground="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="Dhaka Community Hospital" />
@@ -78,6 +79,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/ripple1"
+            android:fontFamily="@font/days_one"
             android:foreground="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="Al Haramain Hospital" />
@@ -95,6 +97,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/ripple1"
+            android:fontFamily="@font/days_one"
             android:foreground="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="BRB Hospital" />
@@ -112,6 +115,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/ripple1"
+            android:fontFamily="@font/days_one"
             android:foreground="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="Central Hospital" />
@@ -129,6 +133,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/ripple1"
+            android:fontFamily="@font/days_one"
             android:foreground="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="Samorita Hospital" />
@@ -145,6 +150,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/ripple1"
+            android:fontFamily="@font/days_one"
             android:foreground="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="Square Hospital" />
@@ -162,6 +168,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/ripple1"
+            android:fontFamily="@font/days_one"
             android:foreground="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="United Hospital" />
@@ -178,6 +185,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/ripple1"
+            android:fontFamily="@font/days_one"
             android:foreground="?attr/selectableItemBackground"
             android:stateListAnimator="@null"
             android:text="Shalahuddin Hospital" />
