@@ -12,11 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EPharma">
-        <activity android:name=".Cart">
-
-
-
-        </activity>
+        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".Cart"></activity>
         <activity android:name=".welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
-        <activity android:name=".Login"></activity>
+        <activity android:name=".Login" />
         <activity android:name=".get_report" />
         <activity android:name=".Reports" />
         <activity android:name=".Medicine" />
@@ -46,11 +43,6 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <!--        <activity-->
-<!--            android:name=".Cart"-->
-<!--            tools:ignore="DuplicateActivity" />-->
-
-
     </application>
 
 </manifest>
