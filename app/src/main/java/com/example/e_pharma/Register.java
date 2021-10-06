@@ -39,10 +39,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//        getSupportActionBar().hide();
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+      getSupportActionBar().hide();
 //
 //
         setContentView(R.layout.activity_register);
@@ -93,9 +93,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
 //
 //    }
 //
-//    public void reg(){
-//        Intent i = new Intent(this,Login.class);
-//        startActivity(i);
+
     }
 
 
@@ -108,9 +106,18 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
 
             case R.id.registerID:
                 registerUser();
+                FullName.getText().clear();
+                Phone.getText().clear();
+                Email.getText().clear();
+                Password.getText().clear();
+
                 break;
         }
     }
+
+
+
+
 
     private void registerUser(){
         String email=Email.getText().toString().trim();
@@ -186,7 +193,18 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                         }
                     }
                 });
+
+        Intent i = new Intent(this,Login.class);
+        startActivity(i);
+
     }
+
+//        public void reg(){
+
+
+
+
+
 
 //    private class OnCompletionListener<T> {
 //    }

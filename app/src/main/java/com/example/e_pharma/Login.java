@@ -291,6 +291,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.loginID:;
                 Login();
+
                 break;
         }
     }
@@ -356,7 +357,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
 
 
-
+        Email.getText().clear();
+        Password.getText().clear();
 
 
 
