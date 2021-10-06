@@ -18,7 +18,7 @@
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/berkshire_swash"
         android:text="REGISTER"
-        android:textColor="@color/black"
+        android:textColor="#121111"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

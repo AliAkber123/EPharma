@@ -9,9 +9,15 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.PrimitiveIterator;
+
 public class MainActivity extends AppCompatActivity {
 private Button medicine;
 private Button rep;
+private Button logOUT;
+private Button about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,26 @@ private Button rep;
 
 
         setContentView(R.layout.activity_main);
+
+
+        logOUT=(Button)findViewById(R.id.logoutID);
+        logOUT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MainActivity.this,Login.class));
+            }
+        });
+
+
+        about=(Button)findViewById(R.id.aboutID);
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,About.class));
+            }
+        });
+
 
         medicine = findViewById(R.id.medicine);
         medicine.setOnClickListener(new View.OnClickListener() {
