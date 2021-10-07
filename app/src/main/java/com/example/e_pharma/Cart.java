@@ -103,14 +103,14 @@ ImageView back;
 
 
         init();
-    LoadDrinkFromFirebase();
+    LoadMedicinesFromFirebase();
     countCartItem();
     }
 
-    private void LoadDrinkFromFirebase() {
+    private void LoadMedicinesFromFirebase() {
         List<MedModel> medModels = new ArrayList<>();
         FirebaseDatabase.getInstance()
-                .getReference("Drink")
+                .getReference("Medicines")
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
